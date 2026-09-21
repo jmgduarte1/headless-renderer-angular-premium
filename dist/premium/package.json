@@ -1,0 +1,32 @@
+{
+  "name": "@jmgduarte/headless-angular-premium",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "dist/premium/fesm2022/jmgduarte-headless-angular-premium.mjs",
+  "module": "fesm2022/jmgduarte-headless-angular-premium.mjs",
+  "typings": "types/jmgduarte-headless-angular-premium.d.ts",
+  "dependencies": {
+    "@jmgduarte/headless-angular": "file:../module-angular",
+    "@jmgduarte/headless-core": "file:../module-core",
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0"
+  },
+  "sideEffects": false,
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/jmgduarte-headless-angular-premium.d.ts",
+      "default": "./fesm2022/jmgduarte-headless-angular-premium.mjs"
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}
