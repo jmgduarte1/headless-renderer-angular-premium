@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "./dist/premium",
+  "allowedNonPeerDependencies": ["@jmgduarte/headless-angular", "@jmgduarte/headless-core", "tslib"],
+  "lib": { "entryFile": "src/public-api.ts" }
+}
