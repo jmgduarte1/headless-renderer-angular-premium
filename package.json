@@ -6,31 +6,23 @@
   "main": "dist/premium/fesm2022/jmgduarte-headless-angular-premium.mjs",
   "module": "dist/premium/fesm2022/jmgduarte-headless-angular-premium.mjs",
   "typings": "dist/premium/types/jmgduarte-headless-angular-premium.d.ts",
+  "files": ["dist/premium"],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/premium/types/jmgduarte-headless-angular-premium.d.ts",
+      "import": "./dist/premium/fesm2022/jmgduarte-headless-angular-premium.mjs"
+    }
+  },
   "dependencies": {
-    "@jmgduarte/headless-angular": "file:../module-angular",
-    "@jmgduarte/headless-core": "file:../module-core",
+    "@jmgduarte/headless-angular": "git+ssh://git@github.com/jmgduarte1/headless-renderer-angular.git#dist",
+    "@jmgduarte/headless-core": "git+ssh://git@github.com/jmgduarte1/headless-renderer-core.git#dist",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "@angular/common": "^21.2.0",
     "@angular/core": "^21.2.0",
     "@angular/platform-browser": "^21.2.0"
-  },
-  "scripts": {
-    "build": "ng build headless-angular-premium",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "ng test headless-angular-premium --watch=false"
-  },
-  "devDependencies": {
-    "@angular/build": "^21.2.19",
-    "@angular/cli": "^21.2.19",
-    "@angular/compiler": "^21.2.0",
-    "@angular/compiler-cli": "^21.2.0",
-    "@angular/platform-browser": "^21.2.0",
-    "jsdom": "^26.1.0",
-    "ng-packagr": "^21.2.0",
-    "typescript": "~5.9.2",
-    "vitest": "^4.0.8"
   },
   "sideEffects": false
 }
