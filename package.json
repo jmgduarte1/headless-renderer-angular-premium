@@ -1,12 +1,21 @@
 {
   "name": "@jmgduarte/headless-angular-premium",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "dist/premium/fesm2022/jmgduarte-headless-angular-premium.mjs",
   "module": "dist/premium/fesm2022/jmgduarte-headless-angular-premium.mjs",
   "typings": "dist/premium/types/jmgduarte-headless-angular-premium.d.ts",
   "files": ["dist/premium"],
+  "description": "Premium Angular features for Headless Renderer, including SEO metadata rendering and configurable canonical and social URLs.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmgduarte1/headless-renderer-angular-premium.git"
+  },
+  "license": "MIT",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -15,8 +24,8 @@
     }
   },
   "dependencies": {
-    "@jmgduarte/headless-angular": "git+ssh://git@github.com/jmgduarte1/headless-renderer-angular.git#dist",
-    "@jmgduarte/headless-core": "git+ssh://git@github.com/jmgduarte1/headless-renderer-core.git#dist",
+    "@jmgduarte/headless-angular": "^0.0.3",
+    "@jmgduarte/headless-core": "^0.0.1",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
